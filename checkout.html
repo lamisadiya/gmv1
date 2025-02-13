@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="checkout.css">
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+  
+    <div class="container">
+      <div class="header">
+        <h1><img src="images/logo.png"></h1>
+        <h2>30 Minute Meeting</h2>
+        <p><img src="images/clock.png"> 30 min</p>
+        <p> <img src="images/videocall.png"> Web conferencing details provided upon confirmation.</p>
+        <p><img src="images/check-mark.png"><span id="selected-date"></span> </p>
+        <p><i class="fas fa-globe fa-xs"></i><span id="selected-timezone"></span></p>
+      </div>
+  
+      <div class="content">
+        <div class="calendar">
+          <div class="head">
+            <button id="prevMonth">❮</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMonth">❯</button>
+          </div>
+          <div class="weekdays">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+          </div>
+          <div id="dates" class="dates"></div>
+        </div>
+
+
+        <label for="timezone-selector" class="dropdown-label">Time Zone</label>
+    <div class="dropdown-wrapper">
+      <button id="dropdown-button" class="dropdown-button"><i class="fas fa-globe fa-xs"></i>  Select Time Zone</button>
+      <div id="dropdown-menu" class="dropdown-menu">
+       <div class="f"> <input type="text" id="timezone-search" placeholder="Search Time Zone..." class="dropdown-search">
+        <div class="toggle-switch-container">
+          <label class="toggle-switch">
+            <input type="checkbox" id="time-format-switch">
+            <span class="slider"></span>
+          </label>
+          <span id="time-format-label">AM/PM</span>
+        </div></div>
+        <select id="timezone-selector" size="8" class="timezone-selector"></select>
+      </div>
+    </div>
+  
+<div id="detailsModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Enter Details</h2>
+    <form id="detailsForm" method="post" action="send_email.php">
+      <label for="name">Name *</label><br/>
+      <input type="text" id="name" name="name" required /> <br/>
+      <br/>
+
+
+      <label for="email">Email *</label><br/>
+      <input type="email" id="email" name="email" required /><br/><br/>
+
+      <label for="phone">Phone *</label><br/>
+      <input type="phone" id="phone" name="phone" required /><br/><br/>
+
+
+      <label for="company">Company </label><br/>
+      <input type="company" id="company" name="company"  /><br/><br/>
+
+      <label for="notes">Please share anything that will help prepare for our meeting.</label><br/><br/>
+      <textarea id="notes" name="notes"></textarea><br/><br/>
+<!-- Radio Buttons Section -->
+<label for="preferences">Select a category</label><br/><br/>
+<div>
+  <input type="radio" id="option1" name="preference" value="Option 1" required />
+  <label for="option1">Brand Identity</label><br/>
+  <input type="radio" id="option2" name="preference" value="Option 2" />
+  <label for="option2">Web Design & Development</label><br/>
+  <input type="radio" id="option3" name="preference" value="Option 3" />
+  <label for="option3">SEO</label><br/>
+  <input type="radio" id="option4" name="preference" value="Option 4" />
+  <label for="option4">Social Media</label><br/>
+  <input type="radio" id="option5" name="preference" value="Option 5" />
+  <label for="option5">3D Modeling</label><br/>
+  <input type="radio" id="option6" name="preference" value="Option 6" />
+  <label for="option6">Amazon</label><br/>
+  <input type="radio" id="option7" name="preference" value="Option 7" />
+  <label for="option7">Video & Motion</label><br/>
+</div>
+<br/>
+
+
+<input type="hidden" id="selectedDateField" name="selectedDate" />
+<input type="hidden" id="selectedTimezoneField" name="selectedTimezone" />
+
+      <button type="submit" id="scheduleEvent" class="modalButton">Schedule meeting</button>
+    </form>
+  </div>
+</div>
+</div>  
+    </div>
+
+
+  <script src="checkout.js"></script>
+</body>
+</html>

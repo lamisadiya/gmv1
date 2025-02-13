@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+    background-color: #343436;
+}
+
+.testimonial-mobile-section {
+    font-family: 'Sora', sans-serif;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343436;
+}/*
+.testimonial-mobile h2{
+text-align: center; 
+  color: rgb(255, 255, 255); 
+  font-size: 30px;  
+  font-weight: bold; 
+
+  word-wrap: break-word
+}*/
+.testimonial-mobile h2{
+font-size: 35px; /* Adjust size to match the image */
+    font-weight: 200; /* Light weight for "What Our" */
+    color: white; /* White text color */
+    margin-bottom: 25px; /* Space below the heading */
+    text-align: center; /* Center-align the text */
+    text-transform: none; /* Keep natural casing */
+    line-height: 1.2; 
+}
+
+.testimonial-mobile h2 span {
+    font-weight: 700; /* Bold weight for "Clients Say" */
+    color: white; /* Keep it white to match */
+}
+
+.testimonial-mobile h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #FF0000; /* Red underline color */
+    margin: 5px auto 0; /* Center underline, add spacing */
+}
+  .testimonial-mobile {
+    max-width: 600px;
+    width: 100%;
+    background: #343436;
+    /*padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px #ff0000 solid;*/
+}
+
+.container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    text-align: left;
+    
+}
+
+.border-box-mobile {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+  box-sizing: border-box;
+    
+}
+
+.star-mobile {
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    
+}
+
+.checked-mobile {
+    color: #ff0000;
+    font-size: 25px;
+}
+
+.quote-mobile {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.author-info-mobile {
+    display: flex;
+    align-items: left;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.test-image-mobile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-details-mobile {
+    text-align: left;
+}
+
+.author-mobile {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.designation-mobile {
+    font-size: 14px;
+    font-weight: 400;
+    color: #787878;
+}
+@media (min-width: 768px){
+    .testimonial-mobile-section{
+        display:none;
+    }
+}
+@media (max-width:767px){
+    .testimonial-mobile-section{
+      display: block;
+    }
+      }
+    

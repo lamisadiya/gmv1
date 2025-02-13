@@ -1,0 +1,468 @@
+
+
+body {
+    font-family:'sora', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: larger;
+  }
+
+
+
+  footer {
+    background-color: #2f2f2f;
+    color: #fff;
+    font-family: 'sora', sans-serif;
+    padding: 40px 20px 0 20px;
+  }
+  
+   .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 35px;
+
+  }
+  
+ .footer-section {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-logo {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+  
+
+  .footer-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  
+  .footer-section a:hover {
+    color: #fff;
+  }
+  
+  .slogan {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Quick Links & Services List */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+.footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+.footer-section ul li a {
+    color: #ccc;
+  }
+  
+.footer-section ul li a:hover {
+    color: #fff;
+  }
+  
+  /* Contact Section */
+.contact-infos {
+    margin-bottom: 10px;
+  }
+  
+.social-icons a {
+    color: #ccc;
+    font-size: 18px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+.social-icons a:hover {
+    color: #fff;
+  }
+  
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding: 23px 0;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 59px;
+  }
+  
+.bottom-links a {
+    margin-right: 15px;
+    color: #ccc;
+    font-size: 14px;
+  }
+  
+.bottom-links a:hover {
+    color: #fff;
+  }
+  
+.copyright {
+    font-size: 14px;
+    color: #ccc;
+  }
+ /* Responsive Styling */
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin: 20px 0;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .bottom-links {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-logo {
+      width: 150px; /* Smaller logo on small screens */
+    }
+  
+    .footer-section h3 {
+      font-size: 14px;
+    }
+  
+    .footer-section p,
+    .footer-section a {
+      font-size: 12px;
+    }
+  
+    .social-icons a {
+      font-size: 16px;
+    }
+  
+    .bottom-links a {
+      font-size: 12px;
+    }
+  
+    .copyright {
+      font-size: 12px;
+    }
+  }   
+ 
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  }
+  .modal h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .modal p{    margin-bottom: 20px;
+    font-size: 14px;
+  
+  }
+  .modal-content {
+    background: #ffffffee;;
+    margin: 10% auto;
+    /*padding: 20px;*/
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+   
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .close-btn:hover {
+    background-color: darkred;
+  }
+  .terms-section {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .terms-section h2 {
+    font-size: 18px;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .terms-section p {
+    font-size: 14px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+  }
+  
+  .terms-section h2:hover {
+    color: #000000;
+  }
+  
+  
+  
+  .policy-section {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .policy-section h2 {
+    font-size: 18px;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .policy-section p {
+    font-size: 14px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+  }
+  
+  .policy-section h2:hover {
+    color: #000000;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      padding: 15px 20px;
+    }
+  
+    .modal h1 {
+      font-size: 20px;
+    }
+  
+    .modal p {
+      font-size: 13px;
+    }
+  
+    .close-btn {
+      font-size: 14px;
+      padding: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .modal-content {
+      margin: 20% auto;
+      width: 90%;
+      padding: 10px 15px;
+    }
+  
+    .modal h1 {
+      font-size: 18px;
+    }
+  
+    .modal p {
+      font-size: 12px;
+    }
+  
+    .close-btn {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
+  .navbar {
+    background-color: white;
+    padding: 24px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: filter 0.3s ease; /* Smooth transition for logo color change */
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black; /* Original color */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for link color change */
+}
+
+.nav-links a:hover {
+    color: #FF0000; /* Original hover color before scrolling */
+}
+.navbar.scrolled .nav-links a {
+    color: white; /* Links turn white after scrolling */
+}
+
+.navbar.scrolled .nav-links a:hover {
+    color: black; /* Links turn black on hover after scrolling */
+}
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px;
+        color: black;
+    }
+
+    .menu-icon {
+        display: flex; /* Show the menu icon on small screens */
+    }
+
+    /* Show menu when clicked */
+    .nav-links.active {
+        display: flex; /* Show the nav links in column format */
+    }
+
+    /* Dropdown visibility on small screens */
+    .dropdown-content {
+        position: relative; /* Adjust the dropdown for small screens */
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+}
+
+/* Media Query for larger screens (hover behavior) */
+@media screen and (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block; /* Show dropdown on hover */
+    }
+}
+
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+  }
+  
+  .header-section {
+    text-align: left;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  
+  .header-section img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .header-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .header-section p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .trend {
+   
+    padding: 20px;
+  }
+  
+  .trend h2 {
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .trend ul {
+    padding-left: 20px;
+  }
+  
+  .trend ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+  }
+  .head{
+    width: 50%;}

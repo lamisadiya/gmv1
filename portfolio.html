@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Sora:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="canonical" href="https://www.graphodio.com">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <section class="image-gallery gallery-left-1">
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+  </section>
+
+  <section class="image-gallery gallery-right-1">
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+  </section>
+
+  <!-- Second Pair of Galleries -->
+  <section class="image-gallery gallery-left-2">
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+  </section>
+
+  <section class="image-gallery gallery-right-2">
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+    <div class="image-card"><img src="images/icon-storybook.png" alt="" /></div>
+  </section>
+
+  <script>
+    // Functionality for Multiple Galleries
+    const galleries = [
+      { element: document.querySelector('.gallery-left-1'), direction: -1 },
+      { element: document.querySelector('.gallery-right-1'), direction: 1 },
+      { element: document.querySelector('.gallery-left-2'), direction: -1 },
+      { element: document.querySelector('.gallery-right-2'), direction: 1 }
+    ];
+
+    // Track translation values for each gallery
+    const translateXValues = [0, 0, 0, 0];
+
+    window.addEventListener('wheel', (event) => {
+      const delta = event.deltaY;
+
+      // Adjust each gallery's translation based on its scroll direction
+      galleries.forEach((gallery, index) => {
+        if (delta > 0) {
+          translateXValues[index] += gallery.direction * 20;
+        } else {
+          translateXValues[index] -= gallery.direction * 20;
+        }
+
+        // Apply the transformation
+        gallery.element.style.transform = `translateX(${translateXValues[index]}px)`;
+      });
+    });
+  </script>
+
+
+</body></html>
